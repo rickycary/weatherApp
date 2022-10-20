@@ -6,7 +6,7 @@ const baseURL = 'https://api.openweathermap.org/data/2.5/weather?'
 
 // Function that does the Weather Search
 function weatherSearch(location){
-    const url = $.ajax(`${baseURL}q=${location}&appid=${apiKey}`)
+    const url = $.ajax(`${baseURL}q=${location}&units={imperial}&appid=${apiKey}`)
 
 // Make Our Request
     .then((weather) => {
@@ -18,6 +18,8 @@ function weatherSearch(location){
 
         $main.html(`
         <h1>Location: ${weather.name}</h1>
+        <h1>Temperature: ${weather.main.temp}</h1>
+
         `)
 
     })
