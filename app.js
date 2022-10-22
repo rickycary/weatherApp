@@ -19,6 +19,8 @@ function weatherSearch(location){
         $main.html(`
         <h1>Location: ${weather.name}</h1>
         <h1>Temperature: ${weather.main.temp}</h1>
+        <h1>Weather: ${weather.weather[0].description}</h1>
+        <h1>Wind: ${weather.wind.speed} mph</h1>
         <h1>Low Temp: ${weather.main.temp_min}</h1>
         <h1>High Temp: ${weather.main.temp_max}</h1>
         <h1>Humidity: ${weather.main.humidity}</h1>
